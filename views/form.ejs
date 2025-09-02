@@ -1,3 +1,21 @@
-<form method="POST" action="/new">
-   put your inputs and buttons in here!
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Message</title>
+    <link rel="stylesheet" href="formStyles.css">
+</head>
+<body>
+    <form method="POST" action="/new">
+        <div>
+            <input type="text" placeholder="Your Name" name="user" value="<%= typeof user !== 'undefined' ? user : '' %>" required>
+            <input type="text" placeholder="Enter Your Message" name="text" value="<%= typeof text !== 'undefined' ? text : '' %>" required>
+        </div>
+        <div>
+            <a href="../" class="pointer">Back</a>
+            <button type="submit" class="pointer">Send Message</button>
+        </div>
+    </form>
+</body>
+</html>
